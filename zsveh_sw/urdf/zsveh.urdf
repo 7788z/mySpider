@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="zsveh">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="3.528E-17 -0.031359 0.0071375"
+        rpy="0 0 0" />
+      <mass
+        value="14.598" />
+      <inertia
+        ixx="0.88303"
+        ixy="-4.188E-18"
+        ixz="-3.5344E-17"
+        iyy="0.16309"
+        iyz="-0.028336"
+        izz="0.97001" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="pinl">
+    <inertial>
+      <origin
+        xyz="2.7756E-17 0.012021 -6.0625E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.031473" />
+      <inertia
+        ixx="3.4432E-05"
+        ixy="-4.934E-20"
+        ixz="-5.6702E-22"
+        iyy="1.287E-05"
+        iyz="8.2344E-23"
+        izz="2.2908E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/pinl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/pinl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jpinl"
+    type="continuous">
+    <origin
+      xyz="-0.2 0.2 0"
+      rpy="3.1416 0 -1.642" />
+    <parent
+      link="base_link" />
+    <child
+      link="pinl" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wfl">
+    <inertial>
+      <origin
+        xyz="2.9088E-14 -2.7756E-17 5.0879E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.9414" />
+      <inertia
+        ixx="0.011938"
+        ixy="1.1438E-17"
+        ixz="-4.5553E-19"
+        iyy="0.0070424"
+        iyz="-2.9228E-20"
+        izz="0.0070424" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wfl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wfl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jwfl"
+    type="continuous">
+    <origin
+      xyz="0 0.065 0"
+      rpy="3.1416 0 1.5708" />
+    <parent
+      link="pinl" />
+    <child
+      link="wfl" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="pinr">
+    <inertial>
+      <origin
+        xyz="0 0.012021 2.5615E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.031473" />
+      <inertia
+        ixx="3.4432E-05"
+        ixy="8.9468E-21"
+        ixz="-5.1262E-22"
+        iyy="1.287E-05"
+        iyz="-2.7052E-21"
+        izz="2.2908E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/pinr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/pinr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jpinr"
+    type="continuous">
+    <origin
+      xyz="0.2 0.2 0"
+      rpy="-3.1416 0 1.5116" />
+    <parent
+      link="base_link" />
+    <child
+      link="pinr" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="wfr">
+    <inertial>
+      <origin
+        xyz="2.9088E-14 2.7756E-17 -3.0851E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.9414" />
+      <inertia
+        ixx="0.011938"
+        ixy="-2.8731E-18"
+        ixz="-2.095E-18"
+        iyy="0.0070424"
+        iyz="3.5305E-21"
+        izz="0.0070424" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wfr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wfr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jwfr"
+    type="continuous">
+    <origin
+      xyz="0 0.065 0"
+      rpy="-3.1416 0 1.5708" />
+    <parent
+      link="pinr" />
+    <child
+      link="wfr" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="wrl">
+    <inertial>
+      <origin
+        xyz="2.9116E-14 2.4684E-18 -5.5511E-17"
+        rpy="0 0 0" />
+      <mass
+        value="1.9414" />
+      <inertia
+        ixx="0.011938"
+        ixy="-1.9052E-19"
+        ixz="-8.8545E-32"
+        iyy="0.0070424"
+        iyz="7.806E-23"
+        izz="0.0070424" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wrl.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wrl.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jwrl"
+    type="continuous">
+    <origin
+      xyz="-0.215 -0.3 0"
+      rpy="-1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="wrl" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="wrr">
+    <inertial>
+      <origin
+        xyz="2.9116E-14 2.4753E-18 0"
+        rpy="0 0 0" />
+      <mass
+        value="1.9414" />
+      <inertia
+        ixx="0.011938"
+        ixy="-1.9052E-19"
+        ixz="-6.6174E-21"
+        iyy="0.0070424"
+        iyz="7.806E-23"
+        izz="0.0070424" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wrr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.94118 0.67451 0.11765 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zsveh/meshes/wrr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="jwrr"
+    type="continuous">
+    <origin
+      xyz="0.215 -0.3 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="wrr" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+</robot>
